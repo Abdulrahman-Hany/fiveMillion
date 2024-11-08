@@ -1,0 +1,2091 @@
+/*-----------------------------------*\
+ * ##GOOGLE FONTS
+\*-----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    /*=====> FONTS <=====*/
+
+    /*=====> COLORS <=====*/
+    --Bacgronds-color-page: #171717;
+    --Bacgronds-color-status: #282828;
+    --Bacgronds-color-yello: #fcd535;
+    ---text--color: #fff;
+    ---text--color-60: #bfc4c6;
+    ---text--color-30: #939a9e;
+    ---text-description: #b8b8b8;
+    ---border-color: #2e2e2e;
+}
+
+/*-----------------------------------*\
+ * ##BASIC REST
+\*-----------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    background-color: var(--Bacgronds-color-page);
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*-----------------------------------*\
+ * ##section courses
+\*-----------------------------------*/
+.courses-section {
+    display: flex;
+    padding-top: 17px;
+    padding: 0 40px 0 15px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+}
+
+/*=====> logo-center <=====*/
+.logo-wrapper {
+    z-index: 10;
+    display: flex;
+    min-height: 75px;
+    width: 84px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 14px;
+}
+
+.logo {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 144px;
+}
+
+/*=====> svg-color-center <=====*/
+svg.svg-color-center {
+    position: absolute;
+    top: 0;
+    z-index: -99999;
+    overflow: hidden;
+}
+
+/*=====> background-images-left and right <=====*/
+.background-images {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    margin-top: -92px;
+    min-height: 294px;
+    width: 100%;
+    align-items: center;
+    gap: 40px 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: -199;
+}
+
+.background-images {
+    position: absolute;
+    z-index: -199;
+}
+
+.background-image {
+    object-fit: contain;
+    object-position: center;
+    max-width: 52%;
+    align-self: stretch;
+    margin: 0;
+}
+
+.background-image.one {
+    position: absolute;
+    left: 0;
+}
+
+.background-image.two {
+    position: absolute;
+    right: 0;
+}
+
+/*=====> content wrapper <=====*/
+.content-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 100px;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 999999;
+}
+
+.header-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    border-bottom: 1px solid #2E2E2E;
+}
+
+.header-content {
+    align-self: end;
+    display: flex;
+    width: 597px;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.title-wrapper {
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.section-title {
+    color: var(---text--color);
+    text-align: right;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.icon-wrapper {
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.03);
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin: auto 0;
+    padding: 10px;
+}
+
+.icon {
+    object-fit: contain;
+    object-position: center;
+    width: 35px;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.section-description {
+    color: var(---text--color-60);
+    text-align: right;
+    margin-top: 8px;
+}
+
+
+/* =========>> Wrapper with horizontal scroll functionality <<========= */
+.filter-wrapper {
+    direction: rtl;
+    border-color: var(---border-color);
+    border-bottom-width: 1px;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 10px;
+    padding: 20px 10px;
+    align-items: center;
+    margin-top: 48px;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* =========>> Hides scrollbar in Webkit browsers <<========= */
+.filter-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-status {
+    display: inline-flex;
+    flex-direction: column;
+    font-weight: 400;
+    width: 176px;
+    min-width: 170px;
+    cursor: pointer;
+}
+
+.status-selector {
+    border-radius: 12px;
+    background-color: var(--Bacgronds-color-status);
+    color: var(---text--color-30);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 16px 13px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    text-align: right;
+    background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/b845de6d71cdcb2f387258308424619a19e9955d436566a69dc045097c2a93f8?placeholderIfAbsent=true&apiKey=954e1e40c83040d0846d7af99f0740b4');
+    background-repeat: no-repeat;
+    background-position: left 20px center;
+    background-size: 20px;
+    border: none;
+}
+
+.status-selector option {
+    background-color: var(--Bacgronds-color-status);
+    color: var(---text--color-30);
+    padding: 10px;
+}
+
+.status-icon {
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.status-label {
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.status-selector:focus {
+    outline: none;
+}
+
+.filter-categories {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    justify-content: start;
+    flex-wrap: nowrap;
+    flex: 1;
+    margin: auto 0;
+}
+
+.category-item {
+    border-radius: 1000px;
+    align-self: stretch;
+    width: fit-content;
+    margin: auto 0;
+    padding: 10px 30px;
+    background-color: transparent;
+    color: var(---text--color-30);
+    transition: all 0.4s;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.category-item:hover,
+.category-item.active,
+.category-item:focus {
+    background-color: var(--Bacgronds-color-yello);
+    color: var(--Bacgronds-color-page);
+}
+
+/*========> course-card <========*/
+.courses-grid {
+    display: flex;
+    margin-top: 64px;
+    width: 100%;
+    align-items: start;
+    gap: 20px;
+    justify-content: start;
+    flex-wrap: wrap;
+    direction: rtl;
+}
+
+#course-container.active {
+    display: none;
+}
+
+#summary-container {
+    display: none;
+}
+
+#summary-container.active {
+    display: block;
+}
+
+.comment-section {
+    display: none;
+}
+
+.comment-section.active {
+    display: block;
+}
+
+.course-card {
+    display: flex;
+    min-width: 240px;
+    min-height: 355px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 320px;
+}
+
+/* ========> card-content <========= */
+.card-content {
+    position: relative;
+    background-color: #1a1a1a;
+    padding: 16px 20px;
+    border-radius: 28px;
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    transition: all .4s;
+}
+
+.card-content:hover {
+    background-color: #222;
+    box-shadow: 0px 0px 31.4px 0px rgba(150, 150, 150, 0.25) inset;
+}
+
+.card-content:hover .featured-badge {
+    display: block;
+}
+
+.course-info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: right;
+    justify-content: start;
+}
+
+.card-content a {
+    width: 100%;
+}
+
+.course-image {
+    border-radius: 12px;
+    background-color: #414141;
+    display: flex;
+    min-height: 158px;
+    width: 100%;
+}
+
+.course-details {
+    display: flex;
+    margin-top: 12px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.course-title {
+    color: var(---text--color);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.course-description {
+    color: var(---text-description);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 4px;
+}
+
+.course-meta {
+    display: flex;
+    margin-top: 8px;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    color: var(---text--color);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.meta-item {
+    align-self: stretch;
+    display: flex;
+    align-items: start;
+    gap: 7px;
+    justify-content: start;
+    margin: auto 0;
+}
+
+.meta-icon {
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+}
+
+.course-action {
+    border-radius: 8px;
+    background-color: #2c2c2c;
+    align-self: end;
+    display: flex;
+    margin-top: 12px;
+    min-height: 41px;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.course-action:hover,
+.progress-button:hover,
+.action-button:hover {
+    background-color: var(--Bacgronds-color-yello);
+}
+
+.action-icon-wrapper {
+    align-self: stretch;
+    display: flex;
+    min-height: 30px;
+    width: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    padding: 5px;
+}
+
+.action-icon {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    color: var(--Bacgronds-color-page);
+}
+
+.course-action:hover .meta-icon path {
+    stroke: var(--Bacgronds-color-page) !important;
+    transition: stroke 0.3s ease;
+}
+
+.featured-action {
+    display: flex;
+    margin-top: 12px;
+    width: 100%;
+    align-items: center;
+    font-size: 13px;
+    color: var(--Bacgronds-color-page);
+    font-weight: 600;
+    white-space: nowrap;
+    line-height: 1.6;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+}
+
+.action-button {
+    align-self: stretch;
+    border-radius: 8px;
+    color: var(---text--color);
+    background-color: #2c2c2c;
+    min-width: 240px;
+    width: 100%;
+    gap: 10px;
+    flex: 1;
+    margin: auto 0;
+    padding: 10px;
+    transition: all .4s;
+}
+
+.progress-action {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 40px 42px;
+    justify-content: space-between;
+    direction: ltr;
+}
+
+.progress-bar-wrapper {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: start;
+    margin: auto 0;
+}
+
+.progress-bar {
+    border-radius: 680px;
+    background-color: #313131;
+    align-self: stretch;
+    position: relative;
+    display: flex;
+    min-height: 8px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 98px;
+    margin: auto 0;
+}
+
+.progress-fill {
+    border-radius: 680px;
+    background-color: var(--Bacgronds-color-yello);
+    z-index: 0;
+    display: flex;
+    min-height: 8px;
+    width: 15px;
+}
+
+.progress-fill-overlay {
+    border-radius: 680px;
+    background-color: var(--Bacgronds-color-yello);
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    min-height: 8px;
+    width: 15px;
+    left: 0;
+    bottom: 0;
+    height: 8px;
+}
+
+.progress-fill-overlay.two {
+    width: 77px;
+}
+
+.progress-percentage {
+    color: var(---text--color);
+    text-align: right;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.progress-button {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #2c2c2c;
+    gap: 10px;
+    color: var(---text--color);
+    white-space: nowrap;
+    text-align: center;
+    width: 191px;
+    margin: auto 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.progress-button a,
+.action-button a {
+    color: var(---text--color);
+}
+
+.progress-button:hover a,
+.action-button:hover a {
+    color: var(--Bacgronds-color-page);
+}
+
+.course-card .featured-badge {
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.02);
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    min-height: 35px;
+    width: 35px;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    height: 35px;
+    left: 20px;
+    top: 18px;
+    padding: 0 7px 0 8px;
+    z-index: 999999;
+    display: none;
+}
+
+.featured-badge .badge-icon {
+    position: relative;
+    top: 8px;
+    text-align: center;
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+    margin: auto 0;
+    cursor: pointer;
+    fill: transparent;
+    transition: fill 0.3s ease;
+    z-index: 999999;
+}
+
+.featured-badge:hover .badge-icon,
+.featured-badge.active .badge-icon {
+    fill: var(--Bacgronds-color-yello);
+}
+
+/*-----------------------------------------------------------------------------*/
+
+/*-----------------------------------*\
+ * ##coursee page
+\*-----------------------------------*/
+
+.course-details-reviewo {
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--Bacgronds-color-page);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px 10px 58px;
+}
+
+.elsip-right svg {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    z-index: 1;
+}
+
+.elsip-left svg {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+}
+
+.course-image {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    max-width: 1400px;
+    margin: 0 auto;
+    z-index: 99;
+}
+
+.content-wrapper-details {
+    align-self: center;
+    position: relative;
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 4;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.course-info-details {
+    z-index: 0;
+    display: flex;
+    width: 100%;
+    align-items: start;
+    gap: 40px 100px;
+    margin-top: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    display: flex;
+    min-width: 240px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: start;
+}
+
+.icon-wrapper-details {
+    border-radius: 78px;
+    background-color: #2c2c2c;
+    align-self: stretch;
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin: auto 0;
+    padding: 0 11px;
+}
+
+.icon-wrapper-details:hover .icon,
+.icon-wrapper-details.active .icon {
+    fill: var(--Bacgronds-color-yello);
+}
+
+.icon-wrapper-details .icon {
+    width: 20px;
+    align-self: stretch;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.info-text {
+    border-radius: 78px;
+    background-color: #2c2c2c;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    justify-content: center;
+    margin: auto 0;
+    padding: 8px 16px 8px 15px;
+    font: 400 16px/1.6;
+}
+
+.info-value {
+    color: var(---text--color);
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.info-label {
+    color: #80848e;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.lessons-count {
+    border-radius: 78px;
+    background-color: #2c2c2c;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    margin: auto 0;
+    padding: 8px 15px 8px 16px;
+    font: 500 16px/1.6;
+}
+
+.lessons-text {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    margin: auto 0;
+}
+
+.lessons-label {
+    color: var(---text--color);
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.lessons-value {
+    color: var(--Bacgronds-color-yello);
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.enrollment-status {
+    border-radius: 51px;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: start;
+    margin: auto 0;
+    padding: 10px 15px;
+}
+
+.status-indicator {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: start;
+    width: 10px;
+    margin: auto 0;
+}
+
+.status-dot {
+    position: relative;
+    background-color: #a61d3b;
+    border-radius: 50%;
+    align-self: stretch;
+    display: flex;
+    min-height: 10px;
+    width: 10px;
+    height: 10px;
+    margin: auto 0;
+}
+
+.status-dot::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -2px;
+    top: -1px;
+    background-color: #A61D3B;
+    filter: blur(5.25px);
+    animation: growDot 1.5s linear infinite alternate;
+    transition: all .4s;
+}
+
+@keyframes growDot {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    20% {
+        width: 2px;
+        height: 2px;
+    }
+
+    40% {
+        width: 4px;
+        height: 4px;
+    }
+
+    60% {
+        width: 6px;
+        height: 6px;
+    }
+
+    80% {
+        width: 8px;
+        height: 8px;
+    }
+
+    100% {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.enrollment-count {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: start;
+    margin: auto 0;
+    font: 400 16px/1.6;
+}
+
+.enrollment-icon {
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.enrollment-number {
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.course-description-details {
+    display: flex;
+    min-width: 240px;
+    flex-direction: column;
+    text-align: right;
+    justify-content: start;
+    width: 589px;
+}
+
+.course-description-details .course-title {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.course-summary {
+    color: #80848e;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: 8px;
+}
+
+.registration-notice {
+    border-radius: 12px;
+    background-color: rgba(252, 213, 53, 0.1);
+    z-index: 0;
+    display: flex;
+    margin-top: 48px;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    color: var(---text--color);
+    text-align: right;
+    justify-content: center;
+    padding: 13px 17px;
+    font: 400 20px/36px;
+}
+
+.notice-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notice-text {
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.notice-icon {
+    object-fit: contain;
+    object-position: center;
+    width: 33px;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.lessons-container {
+    border-radius: 28px;
+    background: #1C1C1C;
+    z-index: 0;
+    display: flex;
+    margin-top: 48px;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: start;
+    position: relative;
+}
+
+.lesson-container {
+    border-radius: 28px;
+    background: #1C1C1C;
+    z-index: 0;
+    display: flex;
+    margin-top: 48px;
+}
+
+.lessons-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    border-top: 3px solid #8c7722;
+    border-left: 3px solid #8c7722;
+    border-top-left-radius: 28px;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: 1;
+}
+
+.lessons-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 430px;
+    max-height: 430px;
+    border-top: 3px solid #8c7722;
+    border-left: 3px solid #8c7722;
+    border-top-left-radius: 28px;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: 1;
+}
+
+.lessons-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    padding: 20px 20px 10px;
+}
+
+.lesson-item {
+    border-radius: 12px;
+    background-color: #1f1f1f;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 40px 0;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.lesson-item.active {
+    border-radius: var(--Corner-Medium, 12px);
+    border: 1px solid var(--Bacgronds-color-yello);
+}
+
+.lesson-duration {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #80848e;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: start;
+    margin: auto 0;
+    margin-right: 10px;
+}
+
+.duration-icon {
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.duration-text {
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.lesson-info {
+    align-self: stretch;
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    text-align: right;
+    justify-content: end;
+    margin: auto 0;
+}
+
+.lesson-details {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+    max-width: 552px;
+}
+
+.lesson-title {
+    color: var(---text--color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.lesson-description {
+    color: #80848e;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 23px;
+    margin-top: 6px;
+}
+
+.lesson-number {
+    color: #4d4d4d;
+    white-space: nowrap;
+    width: 49px;
+    padding: 10px;
+    font: 700 24px/1.8 Inter, sans-serif;
+}
+
+.background-element {
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    min-height: 560px;
+    width: 1138px;
+    height: 668px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(0deg, #171717e7 80%, rgba(23, 23, 23, 0.40) 100%);
+    z-index: 999;
+}
+
+.btn-login {
+    position: absolute;
+    top: 60%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    display: inline-flex;
+    padding: 19px 40px;
+    max-width: 192px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 80px;
+    background: var(--Bacgronds-color-yello);
+    z-index: 999990;
+    cursor: pointer;
+}
+
+.btn-login .star-right {
+    position: absolute;
+    left: 124px;
+    top: -36px;
+    width: 40px;
+}
+
+.btn-login .star-left {
+    position: absolute;
+    right: 138px;
+    top: -22px;
+}
+
+.btn-login svg {
+    transition: all .4s;
+    max-width: 192px;
+}
+
+.btn-login:hover svg {
+    transform: translateX(-10px);
+}
+
+.responsive-image {
+    position: absolute;
+    z-index: 99999;
+    aspect-ratio: 1.37;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+}
+
+/*-----------------------------------*\
+ * ##LESSON
+\*-----------------------------------*/
+.next-lesson {
+    display: flex;
+    padding: 10px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 60px;
+    background: var(--Bacgronds-color-yello);
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.next-lesson:hover {
+    box-shadow: var(--Bacgronds-color-yello) 0px 0px 20px;
+}
+
+.next-lesson span {
+    color: #232323;
+}
+
+.tested-qz {
+    display: flex;
+    padding: 10px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 60px;
+    background: #24B067;
+    transition: all .4s;
+}
+
+.tested-qz:hover {
+    box-shadow: #24B067 0px 0px 20px;
+}
+
+.tested-text span {
+    color: #FFF;
+    text-align: right;
+    font-size: 16px;
+}
+
+.nots-lesson {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50%;
+    background: #2B2B2B;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.nots-lesson:hover {
+    box-shadow: #2B2B2B 0px 0px 20px;
+}
+
+/* =========>>course and instructor <<==========*/
+.course-container {
+    margin-top: 30px;
+    position: relative;
+    border-bottom: 1px solid rgba(46, 46, 46, 1);
+    display: flex;
+    padding: 0 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1140px;
+    z-index: 1999;
+}
+
+.instructor-contact {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    margin: auto 0;
+}
+
+.instructor-avatar {
+    border-radius: 8px;
+    background-color: rgba(40, 39, 39, 1);
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0 10px;
+}
+
+.avatar-image {
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+    margin: auto 0;
+    margin: 8px 3px 0 0;
+}
+
+.contact-button {
+    border-radius: 8px;
+    background-color: rgba(252, 213, 53, 1);
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(45, 45, 45, 1);
+    justify-content: flex-end;
+    margin: auto 0;
+    padding: 8px 15px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.contact-text {
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.contact-icon {
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.course-title {
+    color: rgba(255, 255, 255, 1);
+    text-align: right;
+    align-self: stretch;
+    margin: auto 0;
+    font: 700 36px/1.6;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.detials-leson {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: var(--Space-300, 35px);
+    align-self: stretch;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.detials-leson::-webkit-scrollbar {
+    display: none;
+}
+
+.detials-leson .leson-course {
+    transition: all .6s;
+}
+
+.detials-leson .leson-course.active,
+.detials-leson .leson-course:hover {
+    display: flex;
+    padding: 18px 26px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 36px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.detials-leson .leson-course span {
+    color: var(---text--color);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.course-image-lesson {
+    margin-top: 20px;
+}
+
+/*=======>> comment-container <<=======*/
+.comment-section {
+    border-radius: 28px;
+    background-color: #1c1c1c;
+    color: #fff;
+    text-align: right;
+    margin-top: 45px;
+    font: 600 16px/26px;
+}
+
+.content-container-comments {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.comment-paragraph-comments {
+    margin-top: 11px;
+}
+
+.lesson-card-comments {
+    border-radius: 12px;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 11px;
+    padding: 10px;
+    font-size: 13px;
+    color: #80848e;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.lesson-link-comments {
+    color: #80848E;
+    width: 100%;
+    flex: 1;
+}
+
+.lesson-icon-comments {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/*===============>>   <<===================*/
+.lesson-container-notes {
+    direction: ltr;
+    position: absolute;
+    left: 0px;
+    z-index: 9999999;
+    background-color: rgba(28, 28, 28, 0.994);
+    box-shadow: 50px 0 56px rgba(0, 0, 0, 0.25);
+    display: flex;
+    max-width: 500px;
+    min-height: 100vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 278px;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all .4s;
+    display: none;
+}
+
+.lesson-container-notes.active {
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    .lesson-container-notes {
+        padding-bottom: 100px;
+    }
+}
+
+.header-section-notes {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 15px;
+    gap: 40px 100px;
+}
+
+@media (max-width: 991px) {
+    .header-section-notes {
+        max-width: 100%;
+    }
+}
+
+.icon-wrapper-notes {
+    border-radius: 8px;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.icon-wrapper-notes:hover {
+    box-shadow: #ee3f3f94 0px 0px 16px 3px;
+}
+
+.icon-wrapper-notes.add:hover {
+    box-shadow: #24b06899 0px 0px 16px 3px;
+}
+
+.icon-notes {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 25px;
+}
+
+.add-note-notes {
+    color: #fff;
+    text-align: right;
+    font: 400 20px/36px IBM Plex Sans Arabic, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.filter-section-notes {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-family: IBM Plex Sans Arabic, -apple-system, Roboto, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: right;
+}
+
+.filter-options-notes {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.8;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 10px;
+    gap: 4px;
+}
+
+.filter-option-notes {
+    border-radius: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 9px 15px;
+    gap: 7px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.filter-option-notes.delet:hover,
+.filter-option-notes.delet.active {
+    display: flex;
+    padding: 9px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.283px;
+    flex: 1 0 0;
+    border-radius: 72.833px;
+    background: rgba(238, 63, 63, 0.10);
+}
+
+.filter-option-notes.new-notes:hover,
+.filter-option-notes.new-notes.active {
+    display: flex;
+    padding: 9px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.283px;
+    flex: 1 0 0;
+    border-radius: 127.458px;
+    background: rgba(44, 122, 81, 0.10)
+}
+
+.notes-container-notes.add-notes.active {
+    display: none;
+}
+
+.filter-text-notes {
+    align-self: stretch;
+}
+
+.filter-icon-notes {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 22px;
+}
+
+.pinned-notes:hover,
+.pinned-notes.active {
+    background-color: rgba(252, 213, 53, 0.1);
+}
+
+.new-notes {
+    width: 36px;
+}
+
+.lessons-list-notes {
+    align-self: center;
+    display: flex;
+    min-height: 337px;
+    width: 100%;
+    flex-direction: column;
+    font-size: 13px;
+    padding: 0 10px;
+    color: #80848e;
+    line-height: 23px;
+    display: none;
+}
+
+.notes-container-notes.delet-notes {
+    display: none;
+}
+
+.notes-container-notes.delet-notes.active {
+    display: flex;
+}
+
+.lessons-list-notes.active {
+    display: flex;
+}
+
+.lessons-container-notes {
+    position: relative;
+    border-radius: 10px;
+    background-color: #171717;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.lessons-container-notess {
+    position: relative;
+    border-radius: 10px;
+    background-color: #171717;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.lessons-container-notes a span {
+    color: #EE3F3F;
+    text-align: right;
+    font-family: "IBM Plex Sans Arabic";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+}
+
+@media (max-width: 991px) {
+    .lessons-container-notes {
+        max-width: 100%;
+    }
+}
+
+.lesson-item-notes {
+    border-radius: 12px;
+    background-color: #1f1f1f;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+@media (max-width: 991px) {
+    .lesson-item-notes {
+        max-width: 100%;
+    }
+}
+
+.lesson-icon-notes {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+}
+
+.lesson-info-notes {
+    align-self: stretch;
+    display: flex;
+    min-width: 240px;
+    align-items: flex-start;
+    gap: 16px;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.lesson-description-notes {
+    text-align: end;
+    min-width: 240px;
+    width: 100%;
+    flex: 1;
+}
+
+.visually-hidden-notes {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.notes-container-notes {
+    display: flex;
+    max-width: 480px;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.notes-header-notes {
+    display: flex;
+    width: 100%;
+    align-items: start;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.icon-wrapper-notes {
+    border-radius: 8px;
+    background-color: rgba(44, 122, 81, 0.1);
+    display: flex;
+    min-height: 55px;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 55px;
+    padding: 15px;
+}
+
+.icon-wrapper-notes.close {
+    background-color: #212121;
+}
+
+.icon-notes {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+}
+
+.notes-input-notes {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #222;
+    color: var(---text--color);
+    text-align: right;
+    padding: 0 10px 0 0;
+    width: 100%;
+    border: none;
+    font: 400 20px/1.8 IBM Plex Sans Arabic, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.lessons-container-notes {
+    border-radius: 10px;
+    background-color: #171717;
+    display: flex;
+    margin-top: 16px;
+    width: 100%;
+    flex-direction: column;
+    color: #80848e;
+    text-align: right;
+    padding: 10px;
+    font: 400 13px/23px IBM Plex Sans Arabic, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.lesson-notes {
+    border-radius: 12px;
+    background-color: #1f1f1f;
+    display: flex;
+    width: 100%;
+    align-items: start;
+    gap: 10px;
+    justify-content: end;
+    padding: 10px;
+}
+
+.lesson-notes .lesson-icon-notes {
+    cursor: pointer;
+}
+
+.lesson-notes:not(:first-child) {
+    margin-top: 10px;
+}
+
+.lesson-icon-notes {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+}
+
+.lesson-info-notes {
+    display: flex;
+    min-width: 240px;
+    align-items: start;
+    gap: 16px;
+    justify-content: end;
+    flex: 1;
+}
+
+.lesson-text-notes {
+    min-width: 240px;
+    width: 100%;
+    flex: 1;
+}
+
+.visually-hidden-notes {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/*pin-delete-container*/
+.pin-delete-container-pin-del {
+    position: absolute;
+    border-radius: 8px;
+    left: 20%;
+    top: 40%;
+    direction: ltr;
+    background-color: #202020;
+    box-shadow: 0 4px 51px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #fff;
+    white-space: nowrap;
+    text-align: right;
+    justify-content: flex-end;
+    width: 175px;
+    padding: 4px 0;
+    font: 400 13px/23px 'IBM Plex Sans Arabic', -apple-system, Roboto, Helvetica, sans-serif;
+    border: 1px solid #2f2f2f;
+    display: none;
+}
+
+.pin-delete-container-pin-del.active {
+    display: flex;
+}
+
+.content-wrapper-pin-del {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    flex-basis: 0%;
+}
+
+.action-row-pin-del {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.action-text-pin-del {
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.action-icon-pin-del {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.separator-image-pin-del {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.visually-hidden-pin-del {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/*=========================*/
+/* تعديل خلفية القسم */
+.quiz-start-section-startqz {
+    min-height: 100vh;
+    /* لضمان تغطية كامل الشاشة */
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.70) 6.28%, #000 106.28%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans Arabic', -apple-system, Roboto, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: right;
+    position: relative;
+}
+
+/* إعدادات الحاوية */
+.quiz-container-startqz {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* تجعل الحاوية بارتفاع الشاشة بالكامل */
+}
+
+/* إعدادات الصورة الخلفية */
+.background-image-startqz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* تغطي الحاوية بالكامل */
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+/* إعدادات المحتوى */
+.content-wrapper-startqz {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-quiz-button-startqz {
+    align-self: stretch;
+    border-radius: 24px;
+    background-color: #fcd535;
+    width: 100%;
+    font-size: 29px;
+    color: #171717;
+    line-height: 52px;
+    padding: 15px 38px;
+    outline: none;
+    border: none;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.start-quiz-button-startqz:hover {
+    box-shadow: #fcd535 0px 0px 20px;
+}
+
+.quiz-info-startqz {
+    align-self: center;
+    display: flex;
+    margin-top: 32px;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.quiz-questions-startqz {
+    color: #f7f7f7;
+    font-size: 35px;
+    line-height: 62px;
+}
+
+.visually-hidden-startqz {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/*-----------------------------------*\
+ * ##Media
+\*-----------------------------------*/
+@media (max-width: 991px) {
+    .content-wrapper {
+        padding: 0px 25px;
+    }
+
+    svg.svg-color-center {
+        position: absolute;
+        top: -20px;
+    }
+
+    .background-images {
+        min-height: 200px;
+    }
+
+    .filter-wrapper {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .courses-grid {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .registration-notice {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .lessons-container {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 790px) {
+    .lesson-title {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .lesson-description {
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-wrapper {
+        padding: 0px 5px;
+    }
+
+    svg.svg-color-center {
+        position: absolute;
+        top: -90px;
+    }
+}
+
+@media (max-width: 475px) {
+    .info-item {
+        gap: 5px;
+    }
+
+    .notice-text {
+        font-size: 15px;
+    }
+
+    .courses-section {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    .info-item {
+        gap: 5px;
+    }
+
+    .lesson-title {
+        font-size: 17px;
+    }
+
+    .lesson-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 375px) {
+    .btn-login {
+        padding: 19px 25px;
+    }
+
+    .btn-login .star-right {
+        left: 97px;
+    }
+
+    .btn-login .star-left {
+        right: 107px;
+    }
+
+    .icon-wrapper-details .icon,
+    .enrollment-icon {
+        width: 17px;
+    }
+
+    .info-value,
+    .lessons-value,
+    .lessons-label,
+    .enrollment-number {
+        font-size: 13px;
+    }
+}
